@@ -1,0 +1,95 @@
+body {
+    background-image: url("../images/bg.jpg")
+}
+
+
+.jumbotron-fluid {
+    background-image: url("../images/titlebg.jpg");
+    background-size: cover;
+}
+
+.btn-primary {
+    background-image: url("../images/blue.jpg");
+    background-size: cover;
+}
+
+.btn-success {
+    background-image: url("../images/green.png");
+    background-size: cover;
+}
+
+.btn-danger {
+    background-image: url("../images/red.jpg");
+    background-size: cover;
+}
+
+.btn-warning {
+    background-image: url("../images/yellow.jpg");
+    background-size: cover;
+}
+
+.title {
+    font-family: 'Yeon Sung', cursive;
+    color: yellow;
+    text-shadow: 2px 0 0 rgb(0, 0, 0), -2px 0 0 rgb(0, 0, 0), 0 2px 0 rgb(0, 0, 0), 0 -2px 0 rgb(0, 0, 0), 1px 1px rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0);
+}
+
+.gemCounter {
+    font-size: 30px;
+    font-family: 'Pangolin', cursive;
+}
+
+.scoreCounter {
+    font-size: 20px;
+    font-family: 'Pangolin', cursive;
+}
+
+.gembtn {
+    width: 158px;
+    height: 158px;
+}
+
+/* @media only screen and (min-width : 320px) {
+    .gembtn {
+        width: 160px;
+        margin-bottom: 2px;
+    }
+}
+ */
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (min-width: 576px) {
+    .gembtn {
+        width: 231px;
+        height: 231px;
+        margin-bottom: 2px;
+    }
+}
+
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: 768px) {
+    .gembtn {
+        width: 158px;
+        height: 158px;
+    }
+}
+
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width: 992px) {
+    .gembtn {
+        width: 218px;
+        height: 218px;
+    }
+}
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (min-width: 1200px) {
+    .gembtn {
+        width: 263px;
+        height: 263px;
+    }
+}
