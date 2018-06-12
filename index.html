@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Gem Game</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Gem Game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Pangolin|Yeon+Sung" rel="stylesheet">
-    <script src="assets/javascript/game.js"></script>
-</head>
-
-<body>
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container title text-center">
+        <link href="https://fonts.googleapis.com/css?family=Pangolin|Yeon+Sung" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="assets/javascript/game.js"></script>
+        
+    </head>
+    
+    <body>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container title text-center">
             <h1 class="display-4">Gem Mining</h1>
             <p class="lead">Try to add up all the mystery values of the gems to get the right ammount</p>
         </div>
@@ -26,7 +28,7 @@
         <div class="row">
             <div class="card col-9">
                 <div class="card-body">
-                    <h5 class="card-title text-center gemCounter">You need ### gems</h5>
+                    <h5 class="card-title text-center gemCounter">You need <span id="target-number"></span> gems</h5>
                 </div>
             </div>
             <div class="card col-3">
