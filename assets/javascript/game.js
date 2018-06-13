@@ -8,7 +8,6 @@ var wins = 0;
 var losses = 0;
 
 $(document).ready(function () {
-    console.log(totalGems);
 
     var randomGen = function (range, offset) {
         return Math.floor((Math.random() * range) + offset);
@@ -21,20 +20,16 @@ $(document).ready(function () {
 
         // a random number variable for each gem button
         randomBlue = randomGen(1, 3);
-        console.log(randomBlue);
         $(".blueBtn").attr("data-value", randomBlue);
         // adding button value to DOM element
 
         randomGreen = randomGen(10, 3)
-        console.log(randomGreen);
         $(".greenBtn").attr("data-value", randomGreen);
 
         randomRed = randomGen(18, 10)
-        console.log(randomRed);
         $(".redBtn").attr("data-value", randomRed);
 
         randomYellow = randomGen(25, 18)
-        console.log(randomYellow);
         $(".yellowBtn").attr("data-value", randomYellow);
     }
 
@@ -43,7 +38,6 @@ $(document).ready(function () {
     $(".blueBtn").on("click", function () {
         var btnValue = $(this).data("value")
         totalGems += btnValue;
-        console.log(totalGems);
         $("#gemCount").text(totalGems);
         checkStatus();
     });
@@ -51,7 +45,6 @@ $(document).ready(function () {
     $(".greenBtn").on("click", function () {
         var btnValue = $(this).data("value")
         totalGems += btnValue;
-        console.log(totalGems);
         $("#gemCount").text(totalGems);
         checkStatus();
     });
@@ -59,7 +52,6 @@ $(document).ready(function () {
     $(".yellowBtn").on("click", function () {
         var btnValue = $(this).data("value")
         totalGems += btnValue;
-        console.log(totalGems);
         $("#gemCount").text(totalGems);
         checkStatus();
     });
@@ -67,7 +59,6 @@ $(document).ready(function () {
     $(".redBtn").on("click", function () {
         var btnValue = $(this).data("value")
         totalGems += btnValue;
-        console.log(totalGems);
         $("#gemCount").text(totalGems);
         checkStatus();
     });
@@ -77,10 +68,17 @@ $(document).ready(function () {
         if (totalGems === randomGoal) {
             alert("You Win!");
             wins++;
+            $("#wins").text(wins);
+            startGame()
+            totalGems = 0;
+            $("#gemCount").text("0");
         } else if (totalGems > randomGoal) {
             alert("You Lose!");
             losses++;
-            console.log(losses);
+            $("#losses").text(losses);
+            startGame()
+            totalGems = 0;
+            $("#gemCount").text("0");
         }
     }
 });
