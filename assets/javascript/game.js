@@ -1,3 +1,4 @@
+// sets the number variables to start with
 var randomGoal = 0;
 var randomBlue = 0;
 var randomGreen = 0;
@@ -8,7 +9,7 @@ var wins = 0;
 var losses = 0;
 
 $(document).ready(function () {
-
+    // this sets the random number generator for each random variable
     var randomGen = function (range, offset) {
         return Math.floor((Math.random() * range) + offset);
     }
@@ -34,6 +35,8 @@ $(document).ready(function () {
     }
 
     startGame();
+
+    // what each button does on click
 
     $(".blueBtn").on("click", function () {
         var btnValue = $(this).data("value")
@@ -64,6 +67,7 @@ $(document).ready(function () {
     });
 
 
+    // compares the totalGems and randomGoal each time the button is pressed
     function checkStatus() {
         if (totalGems === randomGoal) {
             alert("You Win!");
